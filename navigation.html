@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home - Licialite Photography</title>
+</head>
+<body>
+	<div class="flex-wrapper">
+		<div class="bgimg1"></div>
+		<nav class="navigation">
+			<a href="index.html" class="navtitle">Licialite Photography</a>
+			<span style="cursor:pointer" class="navigation-toggle" onclick="openNav()">
+				<img src="bars.png" alt="" style="width:24px;height:24px;"></span>
+			<div id="myNav" class="overlay">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="overlay-content">
+					<ul class="main-nav">
+						<li><a href="index.html" class="topnav, active">Home</a></li> 
+						<li><a href="gallery.html" class="topnav">Gallery</a></li>
+						<li><a href="shop.html" class="topnav">Shop</a></li>
+						<li><a href="aboutme.html" class="topnav">About Me</a></li>
+						<li><a href="contactme.html" class="topnav">Contact Me</a></li>
+					</ul>
+				</div>
+			</div>
+			</nav>
+		</body>
+	<style>
+		body, html {
+			font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+			font-weight: bold;
+			color: white;
+			height: 100%;
+			margin: 0;
+		}
+		
+		/*background image 1  full screen*/
+		.bgimg1 {
+			background-image: url("img_home_1.jpg");
+			background-color: #262626;
+			background-position: center; 
+			background-repeat: no-repeat; 
+			background-size: cover; 
+			position: absolute;
+			z-index: -1;
+			height: 100%;
+			left: 0;
+			right: 0;
+		}
+		
+		/*navbar elements full screen*/
+		.navigation {
+			background-color: rgba(21,21,21,.2);
+			justify-content: space-between;
+			align-items: center;
+			position: relative;
+			display: flex;
+			padding-bottom: 0;
+			height: 70px;
+		}
+		
+		.navtitle {
+			text-decoration: none;
+			padding-left: 30px;
+			font-size: 20px;
+			margin-top: 0;
+			color: white;
+		}
+
+		.main-nav {
+			justify-content: flex-end;
+			list-style-type:none;
+			flex-direction: row;
+			margin-right: 30px;
+			display: flex;
+		}
+		
+		.main-nav li {
+			margin: 0;
+		}
+					
+		.topnav {
+			text-decoration: none;
+			margin-left: 40px;
+			font-size: 16px;
+			color: white;
+		}
+		
+		/*toggle button for mobile*/
+		.navigation-toggle {
+			display: none;
+		}
+		
+		.closebtn {
+			display: none;
+		}
+		
+		.topnav:hover, .active:hover {
+			color: #888888;
+		}
+		
+		.active {
+			text-decoration: none;
+			margin-left: 40px;
+			font-size: 16px;
+			color: #636363;
+		}
+		
+		.flex-wrapper {
+			display: flex;
+			min-height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		
+		/*css for mobile devices*/
+		@media screen and (max-width: 820px) { 
+			
+			/*navbar elements mobile*/
+			.navigation {
+				background-color: rgba(21,21,21,.2);
+				height: 50px;
+			}
+		
+			.navtitle {
+				padding-left: 20px;				
+				font-size: 20px;
+			}
+			
+			.main-nav {
+				flex-direction: column;
+			}
+		
+			.main-nav li {
+				margin: 0;
+			}
+		
+			.navigation-toggle {
+				padding-top: 4px;
+				padding-right: 20px;
+				display: block;
+			}
+						
+			.overlay {
+				height: 100%;
+				width: 0;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				right: 0;
+				background-color: rgba(21,21,21,.8);
+				overflow-x: hidden;
+				transition: 0.5s;
+			}
+
+			.overlay-content {
+				position: relative;
+				text-align: left;
+				margin-top: 30px;
+				width: 100%;
+				top: 10%;
+			}
+			
+			.main-nav li {
+			margin: 0;
+		}
+			
+			.topnav {
+				text-decoration: none;
+				margin-left: 0;
+				font-size: 16px;
+			}
+
+			.active {
+				margin-left: 0;
+				color: #6E6E6E;
+			}
+			
+			.overlay a {
+				text-decoration: none;
+				list-style-type:none;
+				transition: 0.3s;
+				font-size: 20px;
+				color: #888888;
+				display: block;
+				padding: 8px;
+			}
+			
+			.overlay a:hover, .overlay a:focus {
+				color: #FFFFFF;
+			}
+			
+			.overlay .closebtn {
+				position: absolute;
+				display: block;
+				top: 20px;
+				right: 45px;
+				font-size: 40px;
+				color: #888888;
+			}
+		
+			@media screen and (max-height: 450px) {
+				.overlay a {font-size: 20px}
+				.overlay .closebtn {
+					font-size: 20px;
+					top: 15px;
+					right: 35px;
+				}
+			}
+		
+	</style>
+	<script>
+		/*toggle navbar for mobile*/
+		function openNav() {
+			document.getElementById("myNav").style.width = "75%";
+		}
+
+		function closeNav() {
+			document.getElementById("myNav").style.width = "0%";
+		}
+	</script>
+</html>
